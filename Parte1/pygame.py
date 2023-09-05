@@ -40,3 +40,4 @@ En 2007, la comunidad de Pygame creó una versión de Pygame para Android, lo qu
 
 Para comenzar a trabajar con PyGame, puedes usar el siguiente código para crear una ventana de 320x240 píxeles con un fondo blanco      
       """)
+print("Listo el cambio")

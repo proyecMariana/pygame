@@ -10,4 +10,4 @@ while True:
         if evento.type == QUIT:
             pygame.quit()
             sys.exit()
-    pygame.display.update()
+pygame.display.update()
