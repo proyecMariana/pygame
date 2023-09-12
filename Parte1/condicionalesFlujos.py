@@ -131,7 +131,10 @@ print_args('a', 'b', 'c', 'd')
 
 print('--------------------------------')
 print("""
-Además, las funciones también pueden devolver múltiples valores en Python. En lugar de devolver un solo valor, puedes devolver una tupla que contenga varios valores. Esto te permite devolver varios fragmentos de datos desde una única llamada a la función. Por ejemplo, la siguiente función devuelve dos valores:
+Además, las funciones también pueden devolver múltiples valores en Python. 
+En lugar de devolver un solo valor, puedes devolver una tupla que contenga 
+varios valores. Esto te permite devolver varios fragmentos de datos desde una 
+única llamada a la función. Por ejemplo, la siguiente función devuelve dos valores:
       """)
 def get_info():
     name = "John"

@@ -10,5 +10,5 @@ while True:
         if evento.type == QUIT:
             pygame.quit()
             sys.exit()
-pygame.display.update()
-print("Agregando cambios al archivo holamundo")
+    pygame.display.update()
+    print("Agregando cambios al archivo holamundo")
