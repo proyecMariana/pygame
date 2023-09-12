@@ -1,6 +1,6 @@
 import pygame
 from leap import Leap
-
+#Tenemos un problema con esta libreria de leapmotion
 def main():
     # Inicializa Pygame
     pygame.init()
