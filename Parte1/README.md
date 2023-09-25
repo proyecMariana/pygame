@@ -63,9 +63,11 @@ numbers = [1, 2, 3, 4, 5]
 for number in numbers:
  print (f'Hello World #{number}')
 print('--------------------------------')
-print("""
+
+```
 En Python, puedes modificar listas utilizando los métodos append (agregar), insert (insertar) y remove (eliminar). El método append agrega un elemento al final de la lista, el método insert agrega un elemento en un índice especificado, y el método remove elimina un elemento en un índice especificado. Por ejemplo, el siguiente código agregará el elemento "c" al final de la lista, agregará el elemento "d" en el índice 2 y eliminará el elemento con el valor "a":
-      """)
+
+```
 letters = ['a', 'b', 'e']
 print(letters, 'starting letters')
 letters.append('c')
@@ -111,3 +113,97 @@ print(numeros_pares)
 print('--------------------------------')
 ```
 
+Las comprensiones de lista también se pueden utilizar para crear o modificar listas bidimensionales (matrices) en Python. Para crear una matriz transpuesta a partir de una matriz existente, puedes utilizar comprensiones de lista anidadas. 
+
+```
+matrix = [
+[1, 2, 3],
+[4, 5, 6],
+[7, 8, 9]
+]
+transpose = [[row[i] for row in matrix] for i in range(len(matrix[0]))]
+print(transpose)
+print('--------------------------------')
+
+```
+# Funciones en Python
+
+Las funciones en Python son segmentos de código reutilizable que pueden recibir uno o varios valores de entrada, realizar operaciones sobre ellos y devolver un resultado. Las funciones se utilizan para hacer que el código sea más organizado, legible y apto para su reutilización. Las funciones se pueden definir utilizando la palabra clave "def" y pueden aceptar cualquier cantidad de parámetros. Por ejemplo, la siguiente función toma dos parámetros, "x" e "y", y devuelve su suma:
+
+```
+def add(x, y):
+ return x + y
+
+sum = add(2, 3)
+print(sum) # 5
+
+print('--------------------------------')
+
+
+sum = lambda a, b: a + b
+result = sum(4,5)
+print('4 + 5 = ', result)
+print('--------------------------------')
+
+```
+Python también admite funciones anónimas, que no tienen nombre y se definen utilizando la palabra clave "lambda". Las funciones anónimas pueden aceptar cualquier cantidad de parámetros y siempre devuelven una sola expresión. Aquí tienes una función anónima para sumar dos números:
+
+```
+suma = lambda x, y: x + y
+resultado = suma(5, 3)
+print(resultado)  # Imprimirá: 8
+
+print('--------------------------------')
+
+```
+En este ejemplo, hemos definido una función llamada imprimir_argumentos con un argumento *args. El * antes de args indica que esta función puede aceptar una cantidad variable de argumentos posicionales. Dentro de la función, iteramos a través de args y los imprimimos uno por uno.
+Cuando llamamos a la función imprimir_argumentos con varios argumentos, se almacenan en una tupla y se imprimen en el bucle for. Por lo tanto, la salida será:
+
+```
+def print_args(*args):
+ for arg in args:
+     print(arg)
+print_args('a', 'b', 'c', 'd')
+
+print('--------------------------------')
+```
+Además, las funciones también pueden devolver múltiples valores en Python. 
+En lugar de devolver un solo valor, puedes devolver una tupla que contenga 
+varios valores. Esto te permite devolver varios fragmentos de datos desde una 
+única llamada a la función. Por ejemplo, la siguiente función devuelve dos valores:
+
+```
+def get_info():
+    name = "John"
+    age = 25
+    return (name, age)
+
+name, age = get_info()
+print(name) # John
+print(age) # 25
+
+print('--------------------------------')
+```
+# Clases en Python
+Los clases en Python son similares a plantillas para crear objetos. Son los componentes fundamentales de cualquier lenguaje de programación orientado a objetos. Una clase define las propiedades, el comportamiento y los atributos de un objeto. Las clases también proporcionan métodos, que son funciones que actúan sobre los datos en la clase.
+Aquí hay una introducción a las clases en Python:
+
+```
+class Persona:
+    def __init__(self, nombre, edad, genero):
+        self.nombre = nombre
+        self.edad = edad
+        self.genero = genero
+
+    def presentarse(self):
+        print(f'Hola, mi nombre es {self.nombre}')
+```
+La clase Persona define los atributos y funciones que puede realizar una persona. Aquí tienes un ejemplo de cómo crear un nuevo objeto llamado "tim" a partir de la clase Persona. Una vez que hayamos creado a "tim", podemos llamar al método "presentarse" en "tim".
+
+```
+tim = Persona("Tim", 28, "Male")
+tim.presentarse()
+
+mary = Persona("Mary", 30, "Female")
+mary.presentarse()
+```
